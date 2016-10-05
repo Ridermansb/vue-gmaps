@@ -10,6 +10,13 @@
     "vue",
     "google-maps"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ridermansb/vue-gmaps.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ridermansb/vue-gmaps/issues"
+  },
   "author": "ridermansb <ridermansb@gmail.com> (http://ridermansb.me)",
   "license": "ISC",
   "dependencies": {
