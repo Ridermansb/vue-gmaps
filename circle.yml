@@ -1,11 +1,11 @@
 machine:
   node:
-    version: 4.2.2
+    version: 6.1.0
 
 deployment:
   production:
     branch: master
     commands:
       - npm install --dev
-      - npm i -g semantic-release-cli
+      - npm i semantic-release-cli
       - npm run semantic-release || true
