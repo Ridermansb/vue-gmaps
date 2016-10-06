@@ -28,6 +28,9 @@
     "cz-conventional-changelog": "1.2.0",
     "semantic-release": "^4.3.5"
   },
+  "release": {
+    "verifyConditions": "condition-circle"
+  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"

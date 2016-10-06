@@ -2,12 +2,10 @@ machine:
   node:
     version: 0.10.22
 
-dependencies:
-  pre:
-    - npm i -g semantic-release-cli
-
 deployment:
   production:
     branch: master
     commands:
+      - npm install --dev
+      - npm i -g semantic-release-cli
       - npm run semantic-release || true
