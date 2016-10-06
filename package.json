@@ -25,6 +25,7 @@
     "load-google-maps-api": "0.0.2"
   },
   "devDependencies": {
+    "babel-core": "6.17.0",
     "cz-conventional-changelog": "1.2.0",
     "semantic-release": "^4.3.5"
   },

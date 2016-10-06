@@ -3,8 +3,6 @@ machine:
     version: 6.1.0
 
 dependencies:
-  cache_directories:
-    - "~/.apt-cache"
   pre:
     - sudo apt-get update; sudo apt-get install gnome-keyring libgnome-keyring-dev
 
@@ -14,4 +12,4 @@ deployment:
     commands:
       - npm install --dev
       - npm i semantic-release-cli
-      - DEBUG=true npm run semantic-release || true
+      - npm run semantic-release || true
