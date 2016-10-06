@@ -44,7 +44,7 @@ Add the directive `v-gmaps-searchbox` into your input
 
 So your `vm` will set property `myProperty` like this
 
-```json
+```javascript
 {
     myProperty: {
         setThisField: <value_from_result>,
