@@ -29,7 +29,7 @@
     "semantic-release": "^4.3.5"
   },
   "release": {
-    "verifyConditions": "./node_modules/condition-circle"
+    "verifyConditions": "condition-circle"
   },
   "config": {
     "commitizen": {

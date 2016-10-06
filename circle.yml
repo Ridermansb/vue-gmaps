@@ -14,4 +14,4 @@ deployment:
     commands:
       - npm install --dev
       - npm i semantic-release-cli
-      - npm run semantic-release || true
+      - DEBUG=true npm run semantic-release || true
