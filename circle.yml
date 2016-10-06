@@ -3,6 +3,8 @@ machine:
     version: 6.1.0
 
 dependencies:
+  cache_directories:
+    - "~/.apt-cache"
   pre:
     - sudo apt-get update; sudo apt-get install gnome-keyring libgnome-keyring-dev
 

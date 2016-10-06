@@ -29,14 +29,11 @@
     "semantic-release": "^4.3.5"
   },
   "release": {
-    "verifyConditions": "condition-circle"
+    "verifyConditions": "./node_modules/condition-circle"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "release": {
-    "verifyConditions": "condition-circle"
   }
 }
