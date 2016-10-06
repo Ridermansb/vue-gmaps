@@ -1,11 +1,10 @@
-const path = require('path');
-const webpack = require('webpack')
+const path = require('path')
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: './src/index.js',
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: "index.js"
+    filename: 'index.js'
   },
   module: {
     preLoaders: [
@@ -19,10 +18,10 @@ module.exports = {
       {
         test: /\.js$/,
         include: [
-          path.resolve(__dirname, "src"),
+          path.resolve(__dirname, 'src')
         ],
         exclude: [
-          path.resolve(__dirname, "node_modules"),
+          path.resolve(__dirname, 'node_modules')
         ],
         loader: 'babel',
         query: {
@@ -31,4 +30,4 @@ module.exports = {
       }
     ]
   }
-};
+}
