@@ -1,15 +1,15 @@
 var loadGoogleMapsAPI = require('load-google-maps-api')
 
-function plugin (Vue, {
-  libraries = [ 'places' ]
-  , key
-  , client
-  , version = '3.26'
-} = {}) {
+function plugin (Vue, options) {
 
   if (plugin.installed) {
     return
   }
+
+  var libraries = options && options.libraries ? options.libraries : [ 'places' ]
+  var key = options && options.key ? options.key :  ''
+  var client = options && options.client ? options.client :  ''
+  var version = options && options.version ? options.version :  '3.26'
 
   Vue.directive('gmaps-searchbox', {
     inserted: function (el, binding) {
@@ -43,24 +43,6 @@ function plugin (Vue, {
     if (Vue.gmaps) {
       fn.apply(this, Array.prototype.slice.call(arguments, 1))
     } else {
-      /*
-       var mapLoader = require('google-maps-api')
-       mapLoader(key, libraries, function (maps) {
-       console.log('map loaded', maps)
-       //the google.maps object will now have the places api (google.maps.places)
-       Vue.gmaps = maps
-       Object.defineProperties(Vue.prototype, {
-       $gmaps: {
-       get() {
-       console.log('get. ', this)
-       return Vue.gmaps
-       }
-       }
-       })
-       fn.apply(this, Array.prototype.slice.call(arguments, 1))
-       })
-       */
-
       loadGoogleMapsAPI({
         key: key, client: client, libraries: libraries, v: version
       }).then(google => {
@@ -79,7 +61,7 @@ function plugin (Vue, {
   }
 }
 
-plugin.version = '0.0.1'
+plugin.version = '0.0.3'
 
 export default plugin
 
