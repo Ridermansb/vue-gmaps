@@ -1,4 +1,4 @@
-import loadGoogleMapsAPI from 'load-google-maps-api'
+var loadGoogleMapsAPI = require('load-google-maps-api')
 
 function plugin (Vue, {
   libraries = [ 'places' ]
