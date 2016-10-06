@@ -22,7 +22,7 @@
     "url": "https://github.com/Ridermansb/vue-gmaps/issues"
   },
   "author": "ridermansb <ridermansb@gmail.com> (http://ridermansb.me)",
-  "license": "ISC",
+  "license": "GNU AGPLv3",
   "dependencies": {
     "load-google-maps-api": "0.0.2"
   },
