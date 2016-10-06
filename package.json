@@ -1,6 +1,6 @@
 {
   "name": "vue-gmaps",
-  "description": "A Google Maps vue plugin",
+  "description": "Vue.js plugin that allow search address and places using Google Maps API",
   "version": "0.0.0-semantic-release",
   "main": "dist/index.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "keywords": [
-    "vue",
+    "vue", "google-maps-api", "vue.js",
     "google-maps"
   ],
   "repository": {
