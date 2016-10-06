@@ -1,33 +1,32 @@
-var loadGoogleMapsAPI = require('load-google-maps-api')
+import loadGoogleMapsAPI from 'load-google-maps-api'
 
-function plugin (Vue, options) {
-
+function plugin (Vue, {
+  libraries = [ 'places' ],
+  key,
+  client,
+  version = '3.26'
+} = {}) {
   if (plugin.installed) {
     return
   }
 
-  var libraries = options && options.libraries ? options.libraries : [ 'places' ]
-  var key = options && options.key ? options.key :  ''
-  var client = options && options.client ? options.client :  ''
-  var version = options && options.version ? options.version :  '3.26'
-
   Vue.directive('gmaps-searchbox', {
     inserted: function (el, binding) {
-      let propertyToSet = binding.arg ? binding.arg : 'place'
+      const propertyToSet = binding.arg ? binding.arg : 'place'
       ensureGoogleMaps(() => {
         var searchBox = new Vue.gmaps.places.SearchBox(el)
         searchBox.addListener('places_changed', function () {
           var places = searchBox.getPlaces()
-          if (places.length == 0) {
+          if (places.length === 0) {
             return
           }
 
           let place = {}
-          let originalPlace = places[0]
+          let originalPlace = places[ 0 ]
           var keys = Object.keys(binding.modifiers)
           if (keys.length > 0) {
             keys.forEach(function (key) {
-              place[key] = originalPlace[key]
+              place[ key ] = originalPlace[ key ]
             })
           } else {
             place = originalPlace
@@ -49,7 +48,7 @@ function plugin (Vue, options) {
         Vue.gmaps = google
         Object.defineProperties(Vue.prototype, {
           $gmaps: {
-            get() {
+            get () {
               console.log('get. ', this)
               return Vue.gmaps
             }
@@ -61,7 +60,7 @@ function plugin (Vue, options) {
   }
 }
 
-plugin.version = '0.0.3'
+plugin.version = '0.0.4'
 
 export default plugin
 
