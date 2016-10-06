@@ -1,10 +1,12 @@
 {
   "name": "vue-gmaps",
-  "version": "0.0.1",
   "description": "A Google Maps vue plugin",
+  "version": "0.0.0-semantic-release",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "commit": "./node_modules/.bin/git-cz",
+    "test": "true",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "keywords": [
     "vue",
@@ -21,5 +23,17 @@
   "license": "ISC",
   "dependencies": {
     "load-google-maps-api": "0.0.2"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "1.2.0",
+    "semantic-release": "^4.3.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "release": {
+    "verifyConditions": "condition-circle"
   }
 }
