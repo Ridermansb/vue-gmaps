@@ -13,6 +13,21 @@ module.exports = {
         loader: 'standard',
         exclude: /(node_modules)/
       }
+    ],
+    loaders: [
+      {
+        test: /\.js$/,
+        include: [
+          path.resolve(__dirname, 'src')
+        ],
+        exclude: [
+          path.resolve(__dirname, 'node_modules')
+        ],
+        loader: 'babel',
+        query: {
+          presets: [ 'es2015' ]
+        }
+      }
     ]
   }
 }

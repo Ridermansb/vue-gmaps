@@ -60,7 +60,7 @@ function plugin (Vue, {
   }
 }
 
-plugin.version = '0.0.4'
+plugin.version = '0.0.6'
 
 export default plugin
 
