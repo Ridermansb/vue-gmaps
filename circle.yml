@@ -5,6 +5,9 @@ machine:
 dependencies:
   pre:
     - npm i -g semantic-release-cli
-build:
-  post:
-    - npm run semantic-release || true
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - npm run semantic-release || true
