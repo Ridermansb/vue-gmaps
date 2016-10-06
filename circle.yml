@@ -2,6 +2,10 @@ machine:
   node:
     version: 6.1.0
 
+dependencies:
+  pre:
+    - sudo apt-get update; sudo apt-get install gnome-keyring libgnome-keyring-dev
+
 deployment:
   production:
     branch: master
