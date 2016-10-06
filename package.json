@@ -1,7 +1,6 @@
 {
   "name": "vue-gmaps",
   "description": "Vue.js plugin that allow search address and places using Google Maps API",
-  "version": "0.0.0-semantic-release",
   "main": "dist/index.js",
   "scripts": {
     "commit": "./node_modules/.bin/git-cz",
@@ -9,7 +8,9 @@
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "keywords": [
-    "vue", "google-maps-api", "vue.js",
+    "vue",
+    "google-maps-api",
+    "vue.js",
     "google-maps"
   ],
   "repository": {
@@ -25,12 +26,8 @@
     "load-google-maps-api": "0.0.2"
   },
   "devDependencies": {
-    "babel-core": "6.17.0",
     "cz-conventional-changelog": "1.2.0",
     "semantic-release": "^4.3.5"
-  },
-  "release": {
-    "verifyConditions": "condition-circle"
   },
   "config": {
     "commitizen": {
