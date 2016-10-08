@@ -7,6 +7,8 @@
 
 [![NPM](https://nodei.co/npm/vue-gmaps.png?downloads=true&compact=true)](https://nodei.co/npm/vue-gmaps/)
 
+![Demo](https://j.gifs.com/mwy3V9.gif)
+
 ## Installation
 
 ```bash
