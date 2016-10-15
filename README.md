@@ -19,7 +19,9 @@ And in your `main.js` ...
 ```javascript
 // main.js
 import VueGmaps from 'vue-gmaps'
-Vue.use(VueGmaps)
+Vue.use(VueGmaps, {
+  key: '<your api here>'
+})
 ```
 ## Basic usage
 
