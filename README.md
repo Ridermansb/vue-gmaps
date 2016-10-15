@@ -6,7 +6,7 @@
 
 [![NPM](https://nodei.co/npm/vue-gmaps.png?downloads=true&stars=true)](https://nodei.co/npm/vue-gmaps?downloads=true&stars=true)
 
-![Demo](https://storage.jumpshare.com/preview/sTP7oUISziGbL7jh33bIAuzty0-zPbRcS4rOWMgMoEd466NEpHbB0LsRdtU8xqcnafMFPIdyJz0aD49hDSg9sd0Iq-_ZMIwlJNqsu6s4bO0F1kR3dMUjedqC16uBUu85)
+![Demo](https://github.com/Ridermansb/vue-gmaps/blob/master/vue-gmaps.gif)
 
 ## Installation
 
