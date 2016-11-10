@@ -14,7 +14,7 @@ function plugin (Vue, {
     inserted: function (el, binding) {
       const propertyToSet = binding.arg ? binding.arg : 'place'
       ensureGoogleMaps(() => {
-        var searchBox = new Vue.gmaps.places.SearchBox(el)
+        var searchBox = new Vue.google.places.SearchBox(el)
         searchBox.addListener('places_changed', function () {
           var places = searchBox.getPlaces()
           if (places.length === 0) {
@@ -39,28 +39,21 @@ function plugin (Vue, {
   })
 
   function ensureGoogleMaps (fn) {
-    if (Vue.gmaps) {
+    if (Vue.google) {
       fn.apply(this, Array.prototype.slice.call(arguments, 1))
     } else {
       loadGoogleMapsAPI({
         key: key, client: client, libraries: libraries, v: version
       }).then(google => {
-        Vue.gmaps = google
-        Object.defineProperties(Vue.prototype, {
-          $gmaps: {
-            get () {
-              console.log('get. ', this)
-              return Vue.gmaps
-            }
-          }
-        })
+        Vue.google = google
+        Vue.prototype.$google = google
         fn.apply(this, Array.prototype.slice.call(arguments, 1))
       })
     }
   }
 }
 
-plugin.version = '0.0.6'
+plugin.version = '0.0.8'
 
 export default plugin
 
