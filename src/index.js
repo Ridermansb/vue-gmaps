@@ -41,7 +41,7 @@ function plugin (Vue, {
 
   function ensureGoogleMaps (fn) {
     if (!loadGoogleApi) {
-      fn(window.google)
+      fn(window.google.maps ? window.google.maps : window.google)
     } else if (Vue.google) {
       fn(Vue.google)
     } else {
