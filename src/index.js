@@ -4,7 +4,8 @@ function plugin (Vue, {
   libraries = [ 'places' ],
   key,
   client,
-  version = '3.26'
+  version = '3.26',
+  loadGoogleApi = true
 } = {}) {
   if (plugin.installed) {
     return
@@ -13,8 +14,8 @@ function plugin (Vue, {
   Vue.directive('gmaps-searchbox', {
     inserted: function (el, binding) {
       const propertyToSet = binding.arg ? binding.arg : 'place'
-      ensureGoogleMaps(() => {
-        var searchBox = new Vue.google.places.SearchBox(el)
+      ensureGoogleMaps((google) => {
+        var searchBox = new google.places.SearchBox(el)
         searchBox.addListener('places_changed', function () {
           var places = searchBox.getPlaces()
           if (places.length === 0) {
@@ -39,21 +40,23 @@ function plugin (Vue, {
   })
 
   function ensureGoogleMaps (fn) {
-    if (Vue.google) {
-      fn.apply(this, Array.prototype.slice.call(arguments, 1))
+    if (!loadGoogleApi) {
+      fn(window.google)
+    } else if (Vue.google) {
+      fn(Vue.google)
     } else {
       loadGoogleMapsAPI({
         key: key, client: client, libraries: libraries, v: version
       }).then(google => {
         Vue.google = google
         Vue.prototype.$google = google
-        fn.apply(this, Array.prototype.slice.call(arguments, 1))
+        fn(google)
       })
     }
   }
 }
 
-plugin.version = '0.0.8'
+plugin.version = '0.0.9'
 
 export default plugin
 
