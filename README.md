@@ -23,6 +23,20 @@ Vue.use(VueGmaps, {
   key: '<your api here>'
 })
 ```
+
+Options are:
+
+* **key** <Required!>,
+* **libraries** <Default= [ 'places' ]>,
+* **client**
+* **version** <Default='3'>,
+* **loadGoogleApi** <Default=true>
+
+
+libraries: ['places'],
+  version: '3'****
+
+
 ## Basic usage
 
 Add the directive `v-gmaps-searchbox` into your input
