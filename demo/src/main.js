@@ -5,7 +5,8 @@ import VueGmaps from 'vue-gmaps'
 
 Vue.use(VueGmaps, {
   key: 'AIzaSyCpr35b_ZSoP8nbz0VnBjVz6ABb7iurRCU',
-  libraries: ['places']
+  libraries: ['places'],
+  version: '3'
 })
 
 /* eslint-disable no-new */

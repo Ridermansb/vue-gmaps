@@ -4,7 +4,7 @@ function plugin (Vue, {
   libraries = [ 'places' ],
   key,
   client,
-  version = '3.26',
+  version = '3',
   loadGoogleApi = true
 } = {}) {
   if (plugin.installed) {
