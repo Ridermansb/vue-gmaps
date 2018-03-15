@@ -1,6 +1,10 @@
 # Vue-Gmaps
 > Search address and places using Google Maps API
 
+[Buy me a cofffe][1] please :)
+
+https://buymeacoff.ee/ridermansb
+
 [![Travis](https://img.shields.io/travis/Ridermansb/vue-gmaps.svg?maxAge=2592000?style=flat-square)](https://travis-ci.org/Ridermansb/vue-gmaps)
 [![bitHound](https://img.shields.io/bithound/dependencies/github/ridermansb/vue-gmaps.svg?maxAge=2592000?style=flat-square)](https://www.bithound.io/github/Ridermansb/vue-gmaps) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)    
 
@@ -79,6 +83,5 @@ So your `vm` will set property `myProperty` like this
     }
 }
 ```
-*[Click here to subscribe and get more about Vue.js][0]*
 
-[0]: https://www.getrevue.co/profile/ridermansb
+[1]: https://buymeacoff.ee/ridermansb
